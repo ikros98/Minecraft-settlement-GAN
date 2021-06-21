@@ -9,6 +9,9 @@ SOLIDPLANTS = np.array([17,86,99,100,103,162], dtype=int)
 # dirt, gravel, sand, grass, etc.
 SOIL = np.array([2,3,12,13,82,80,110], dtype=int)
 
+#Filter 1 blocks
+FILTER1 = np.array([17,5,20,50,85,4,67,64,43,61,139,109,98,8,139,43], dtype=int)
+
 # stairs and half slabs
 HALFBLOCK = np.array([44,53,67,108,109,114,126,128,134,135,136,156,163,164,180,182,203,205])
 # built light-transmitting blocks
@@ -53,8 +56,10 @@ def simplify(area:np.ndarray) :
 
 # Aldo
 def simplify2(area:np.ndarray) :
-    area_mod = np.where(np.logical_not(np.isin(area, SOIL)), 0, area)
-    return asBoolean(np.where(np.isin(area_mod, NONFULLBLOCK), 0, area_mod))
+    return np.where(~np.isin(area, FILTER1), 0, area)
+    #area_mod = np.where(np.isin(area, FILTER1), 0, area)
+    #area_mod = np.where(np.isin(area, SOIL), 0, area)
+    #return area_mod#asBoolean(np.wher(np.isin(area, FILTER1), 0, area))
 
 def randomBlit(area:np.ndarray, mask:np.ndarray, sprite:np.ndarray) :
     # assume sprites are cubes.
