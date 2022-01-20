@@ -4,9 +4,9 @@ Procedural Content Generation (PCG) is an area that, in the last few years, with
 
 ### Data set
 
-The Building of the data set took place on a personal computer with macOS 10.13 as operating system and Python 2.7 installed. These two elements are a requirement for the latest version of [MCEdit](https://www.mcedit-unified.net). I have used the latter software with different public filters in order to generate a data set of settlements of $80x80x16$ as resolution.
+The Building of the data set took place on a personal computer with macOS 10.13 as operating system and Python 2.7 installed. These two elements are a requirement for the latest version of [MCEdit](https://www.mcedit-unified.net). I have used the latter software with different public filters in order to generate a data set of settlements of 80x80x16 as resolution.
 
-![MCEdit.png](/Users/ikros/Documents/GitHub/Minecraft-settlement-GAN/imgs/MCEdit.png)
+![MCEdit.png](imgs/MCEdit.png)
 
 ### Network Architecture
 
@@ -22,7 +22,7 @@ Discriminator:
 
 ### Results
 
-The best results were obtained with the $0-1$ data set where the information of the voxel is described with $0$ and $1$, thus, there is or there is not a block.
+The best results were obtained with the 0-1 data set where the information of the voxel is described with 0 and 1, thus, there is or there is not a block.
 
 Examples of two generated settlements:
 
