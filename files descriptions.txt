@@ -1,0 +1,48 @@
+Aldo Fumagalli, ID: 20105835
+Structure of the content of this folder:
+
+The code that contains the design, implementation and evaluation of the 3D-GANs,
+it is on the root folder and it is named as follows:
+
+MinecraftGAN.ipynb
+
+On the training_checkpoints folder some trained models are stored.
+There are two paths:
+	'0-1' contains the 0-1 models trained for 1000 epochs
+	'all materials' contains the all materials models trained for 1500 epochs
+The '100' in a trained model folder means that the filters dimension used was 100 instead of the
+standard 200.
+In every folder of a trained model there is also a settlement in the format of a schematic file
+that was generated from that trained model.
+
+
+The code of the NBT library is on the root folder.
+The files are named as follows:
+
+schematic.py
+	library that allows to manage NBT files and schematic files.
+	credit: https://github.com/cbs228/nbtschematic
+
+SchematicTools.py
+	code built upon the schematic.py in order to create easy access tools
+	credit: https://github.com/BluShine/Minecraft-GAN-City-Generator
+
+
+The code used to generate the data set is in the MCEdit folder.
+Here it can be found a filter made by a Reddit user.
+It was modified to generate a data set that is located in the dateset808016 folder.
+The data set can be found in the supplemental file submission.
+Credit: https://www.reddit.com/r/Minecraft/comments/b4l1cc
+The files are named as follows:
+
+Settlement.py
+	The main file of the filter that was modified in order to generate the data set.
+SettlementAStar.py
+SettlementGenerator.py
+SettlementStructure.py
+SettlementStructureDetails.py
+
+
+
+
+For further explanations see the source code

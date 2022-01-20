@@ -10,7 +10,7 @@ SOLIDPLANTS = np.array([17,86,99,100,103,162], dtype=int)
 SOIL = np.array([2,3,12,13,82,80,110], dtype=int)
 
 #Filter 1 blocks
-FILTER1 = np.array([17,5,20,50,85,4,67,64,43,61,139,109,98,8,139,43], dtype=int)
+FILTER1 = np.array([17,5,20,50,85,4,67,64,61,139,109,98,8,139,43], dtype=int)
 
 # stairs and half slabs
 HALFBLOCK = np.array([44,53,67,108,109,114,126,128,134,135,136,156,163,164,180,182,203,205])
@@ -54,7 +54,7 @@ def asBoolean(area:np.ndarray) :
 def simplify(area:np.ndarray) :
     return asBoolean(np.where(np.isin(area, NONFULLBLOCK), 0, area))
 
-# Aldo
+# Aldo, it cleans the schematic of not useful blocks
 def simplify2(area:np.ndarray) :
     return np.where(~np.isin(area, FILTER1), 0, area)
     #area_mod = np.where(np.isin(area, FILTER1), 0, area)
